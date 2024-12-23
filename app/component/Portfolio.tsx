@@ -1,9 +1,9 @@
 "use client"
 import React, { useState } from 'react';
 import {
-    Moon, Sun, Github, Linkedin, Mail, Code, Terminal,
-    Layout, Database, Server, Globe, Cloud, Lock,
-    MonitorSmartphone, Cpu, Settings, Book
+    Moon, Sun, Github, Linkedin, Mail
+    , Database, Globe, Cloud, Lock,
+
 } from 'lucide-react';
 
 const Portfolio = () => {
@@ -156,7 +156,7 @@ const Portfolio = () => {
                 <div className="max-w-6xl mx-auto px-4 py-20">
                     <div className="text-center space-y-6">
                         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                            Hi, I'm <span className="text-blue-600">Tai Ngonheng</span>
+                            Hi, I&aposm <span className="text-blue-600">Tai Ngonheng</span>
                         </h1>
                         <div className="flex items-center justify-center space-x-2 text-xl">
                             <h3 className="text-white font-bold">Bachelor in Information Technology and Engineering</h3>
@@ -246,8 +246,8 @@ const Portfolio = () => {
                 <div className="max-w-6xl mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-8">Connect With Me</h2>
                     <p className="text-lg max-w-2xl mx-auto mb-8 opacity-85">
-                        I'm always interested in hearing about new projects and opportunities.
-                        Let's collaborate and build something amazing together!
+                        I&aposm always interested in hearing about new projects and opportunities.
+                        Let&aposs collaborate and build something amazing together!
                     </p>
                     <div className="flex justify-center gap-6">
                         <a
