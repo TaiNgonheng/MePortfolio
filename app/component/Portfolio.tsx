@@ -4,7 +4,7 @@ import { Moon, Sun, Github, Linkedin, Mail, Database, Globe, Cloud, Lock, Menu, 
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 const Portfolio = () => {
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(true);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const techStack = [
