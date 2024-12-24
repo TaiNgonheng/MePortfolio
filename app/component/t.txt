@@ -1,0 +1,71 @@
+    const techStack = [
+        {
+            category: "Programming Languages",
+            items: [
+                {
+                    name: "Java",
+                    icon: "☕",
+                    level: 80,
+                    description: "Core language for backend development, Spring Boot applications, and enterprise solutions"
+                },
+                {
+                    name: "JavaScript",
+                    icon: "💛",
+                    level: 85,
+                    description: "Frontend and Node.js backend development, modern ES6+ features"
+                },
+                {
+                    name: "Python",
+                    icon: "🐍",
+                    level: 70,
+                    description: "Data processing, automation scripts, and basic ML applications"
+                }
+            ]
+        },
+        {
+            category: "Frontend Frameworks",
+            items: [
+                {
+                    name: "React.js",
+                    icon: "⚛️",
+                    level: 88,
+                    description: "Building interactive UIs with hooks, context, and modern React patterns"
+                },
+                {
+                    name: "Next.js",
+                    icon: "△",
+                    level: 85,
+                    description: "Server-side rendering, static site generation, and full-stack React applications"
+                },
+                {
+                    name: "Tailwind CSS",
+                    icon: "🎨",
+                    level: 80,
+                    description: "Utility-first CSS framework for rapid UI development"
+                }
+            ]
+        },
+        {
+            category: "Backend Technologies",
+            items: [
+                {
+                    name: "Spring Boot",
+                    icon: "🍃",
+                    level: 95,
+                    description: "Java-based framework for building microservices and web applications"
+                },
+                {
+                    name: "Node.js",
+                    icon: "📦",
+                    level: 78,
+                    description: "JavaScript runtime for building scalable network applications"
+                },
+                {
+                    name: "Express.js",
+                    icon: "🚂",
+                    level: 70,
+                    description: "Web application framework for Node.js backend development"
+                }
+            ]
+        }
+    ];
