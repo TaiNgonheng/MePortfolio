@@ -337,7 +337,6 @@ const Portfolio = () => {
                         </motion.div>
                     </div>
                 </motion.section>
-
                 {/* Contact Section */}
                 <motion.section
                     initial={{ opacity: 0, y: 50 }}
