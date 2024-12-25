@@ -214,7 +214,7 @@ const Portfolio = () => {
                         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="md:w-1/2 text-center md:text-left">
                                 <h5 className="text-xl md:text-6xl font-bold leading-tight mb-3">
-                                    Hi, I&apos;m <span className=" text-8xl font-bold tracking-tighter sm:text-5xl md:text-8xl xl:text-7xl">Tai Ngonheng</span>
+                                     <span className=" text-8xl font-bold tracking-tighter sm:text-5xl md:text-8xl xl:text-7xl">Tai Ngonheng</span>
                                 </h5>
                                 <h2 className="text-xl font-bold mb-4 ">Bachelor in Information Technology and Engineering</h2>
                                 <p className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 mb-6 2xl:text-lg">
