@@ -14,7 +14,7 @@ const Portfolio = () => {
                 {
                     name: "Java",
                     icon: "☕",
-                    level: 80,
+                    level: 90,
                     description: "Core language for backend development, Spring Boot applications, and enterprise solutions"
                 },
                 {
@@ -123,8 +123,8 @@ const Portfolio = () => {
                 isDark ? 'bg-gray-700 text-white' : 'bg-white-500 text-gray-900'
             }`}>
                 {/* Background Animation */}
-                <div className="fixed inset-0 -z-10">
-                    <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-blue-200 to-amber-50 dark:from-purple-500 dark:via-white dark:to-pink-900" />
+                <div className="fixed inset-0 -z-10  ">
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-amber-100 to-amber-50 dark:from-purple-500 dark:via-white dark:to-pink-900" />
                     <div className="absolute inset-0 bg-grid-pattern opacity-10" />
                 </div>
 
@@ -210,14 +210,14 @@ const Portfolio = () => {
                     viewport={{ once: true }}
                     className="pt-24 pb-12"
                 >
-                    <div className="max-w-6xl mx-auto px-4 mt-64" >
+                    <div className="max-w-6xl mx-auto px-4 mt-56 lg:px-1" >
                         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="md:w-1/2 text-center md:text-left">
-                                <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
-                                    Hi, I&apos;m <span className="text-purple-600 font-serif">Tai Ngonheng</span>
-                                </h1>
-                                <h2 className="text-xl font-bold mb-4 text-purple-600 font-sans">Bachelor in Information Technology and Engineering</h2>
-                                <p className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 mb-6 font-sans">
+                                <h5 className="text-xl md:text-6xl font-bold leading-tight mb-3">
+                                    Hi, I&apos;m <span className=" text-8xl font-bold tracking-tighter sm:text-5xl md:text-8xl xl:text-7xl">Tai Ngonheng</span>
+                                </h5>
+                                <h2 className="text-xl font-bold mb-4 ">Bachelor in Information Technology and Engineering</h2>
+                                <p className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 mb-6 2xl:text-lg">
                                     I am Tai Ngonheng, a third-year student majoring in Information Technology and Engineering at the Royal University of Phnom Penh. I am passionate about exploring the potential of technology to drive meaningful change and improve everyday life.
 
                                     As a dedicated learner, I enjoy taking on challenges that push me to grow both academically and personally. My journey in IT has been fueled by curiosity and a desire to contribute to impactful solutions.
@@ -241,11 +241,10 @@ const Portfolio = () => {
                             </div>
                             <div className="md:w-1/2">
                                 <img
-                                    src="
-                               https://media3.giphy.com/media/SpopD7IQN2gK3qN4jS/giphy.gif?cid=6c09b952uhw1mzns7uffh83tw8unay70b7f68we0272dy1a8&ep=v1_gifs_search&rid=giphy.gif&ct=g
+                                    src="https://cdn.dribbble.com/users/4908/screenshots/2570659/rocket.gif
                                     "
                                     alt="Minimalist landscape animation"
-                                    className="w-full h-96 rounded-lg shadow-lg"
+                                    className="w-full h-full rounded-lg shadow-lg"
                                 />
                             </div>
                         </div>
