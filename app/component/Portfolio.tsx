@@ -288,7 +288,7 @@ const Portfolio = () => {
                                     className="md:w-1/2 text-center md:text-left"
                                     variants={boxVariants}
                                 >
-                                    <h2 className="text-4xl md:text-6xl font-bold mb-4">Tai Ngonheng</h2>
+                                    <h1 className="text-7xl md:text-7xl font-bold mb-4">Tai Ngonheng</h1>
                                     <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-400">Information Technology and Engineering</h3>
                                     <p className="text-lg mb-8 opacity-80">
                                         Dynamic software engineer with deep expertise in Java, Python, JavaScript, PHP, and Dart.
@@ -393,9 +393,11 @@ const Portfolio = () => {
 
                     {/* Tech Stack Section */}
                     <motion.section
+                        id="expertise"
                         variants={sectionVariants}
                         initial="hidden"
-                        animate="visible"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
                         className={`py-20 ${isDark ? 'bg-gradient-to-r from-purple-900 to-blue-900' : 'bg-white'}`}
                     >
                         <div className="max-w-6xl mx-auto px-4">
@@ -407,7 +409,7 @@ const Portfolio = () => {
                                         variants={boxVariants}
                                         className="mb-8"
                                     >
-                                        <h3 className={`text-2xl font-bold mb-4 ${isDark ? 'text-blue-300' : 'text-blue-600'}`}>{category.category}</h3>
+                                        <h3 className={`text-2xl font-bold mb-4 ${isDark ? 'text-white' : 'text-blue-600'}`}>{category.category}</h3>
                                         <div className="space-y-4">
                                             {category.items.map((tech, techIndex) => (
                                                 <motion.div
@@ -483,11 +485,12 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gradient-to-r from-blue-900 to-purple-900' : 'bg-white'} rounded-[15px] shadow-lg`}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gradient-to-r from-blue-900 to-purple-900' : 'bg-white'} rounded-[15px] shadow-lg mb-20`}
                         {...rotateAnimation}
                     >
                         <div className="max-w-6xl mx-auto px-4 text-center">
-                            <h2 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-800'}`}>Connect With Me</h2>
+                            <h2 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-800'}`}>Connect
+                                With Me</h2>
                             <p className={`text-lg max-w-2xl mx-auto mb-8 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                                 I&apos;m always interested in hearing about new projects and opportunities.
                                 Let&apos;s collaborate and build something amazing together!
@@ -498,48 +501,54 @@ const Portfolio = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-white/60 hover:bg-white/80'} transition-all hover:scale-110`}
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{scale: 1.1}}
+                                    whileTap={{scale: 0.95}}
                                 >
-                                    <Github className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`} />
+                                    <Github className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`}/>
                                 </motion.a>
                                 <motion.a
                                     href="https://www.linkedin.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-white/60 hover:bg-white/80'} transition-all hover:scale-110`}
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{scale: 1.1}}
+                                    whileTap={{scale: 0.95}}
                                 >
-                                    <Linkedin className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`} />
+                                    <Linkedin className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`}/>
                                 </motion.a>
                                 <motion.a
                                     href="mailto:heng68807@gmail.com"
                                     className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-white/60 hover:bg-white/80'} transition-all hover:scale-110`}
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{scale: 1.1}}
+                                    whileTap={{scale: 0.95}}
                                 >
-                                    <Mail className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`} />
+                                    <Mail className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`}/>
                                 </motion.a>
                             </div>
                             <motion.p
-                                className={`mt-12 text-xl font-semibold ${isDark ? 'text-blue-400' : 'text-blue-600'}`}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.5 }}
+                                className={`mt-12 text-xl font-semibold ${isDark ? 'text-yellow-500' : 'text-blue-600'}`}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{delay: 0.5}}
                             >
-                                &quot;Software is a great combination between artistry and engineering.&quot; - Bill Gates
+                                &quot;Software is a great combination between artistry and engineering.&quot; - Bill
+                                Gates
                             </motion.p>
-                            <motion.p
-                                className={`mt-4 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.7 }}
-                            >
-                                © 2023 Tai Ngonheng. All rights reserved.
-                            </motion.p>
+                            <div className="max-w-6xl mx-auto px-4 text-center">
+                                <motion.p
+                                    className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    transition={{delay: 0.7}}
+                                >
+                                </motion.p>
+                            </div>
                         </div>
                     </motion.section>
+
+                    <footer className={`py-8 text-center ${isDark ? 'bg-gray-900' : 'bg-amber-200'}`}>
+                        © 2024 Tai Ngonheng. All rights reserved.
+                    </footer>
                 </div>
             </motion.div>
         </AnimatePresence>
