@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Moon, Sun, Github, Linkedin, Mail, Database, Globe, Cloud, Lock, Menu, X, Code, BookOpen, Award, Briefcase } from 'lucide-react';
+import { Moon, Sun, Github, Linkedin, Mail, Database, Cloud, Menu, X, Code, Award, Briefcase } from 'lucide-react';
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 
 const Portfolio = () => {
@@ -489,8 +489,8 @@ const Portfolio = () => {
                         <div className="max-w-6xl mx-auto px-4 text-center">
                             <h2 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-800'}`}>Connect With Me</h2>
                             <p className={`text-lg max-w-2xl mx-auto mb-8 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                                I'm always interested in hearing about new projects and opportunities.
-                                Let's collaborate and build something amazing together!
+                                I&apos;m always interested in hearing about new projects and opportunities.
+                                Let&apos;s collaborate and build something amazing together!
                             </p>
                             <div className="flex justify-center gap-6">
                                 <motion.a
@@ -528,7 +528,7 @@ const Portfolio = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5 }}
                             >
-                                "Software is a great combination between artistry and engineering." - Bill Gates
+                                &quot;Software is a great combination between artistry and engineering.&quot; - Bill Gates
                             </motion.p>
                             <motion.p
                                 className={`mt-4 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}
