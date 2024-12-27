@@ -550,6 +550,7 @@ const Portfolio = () => {
                         </div>
                     </motion.section>
 
+
                     {/* Footer */}
                     <footer className={`py-8 text-center ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
                         <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
