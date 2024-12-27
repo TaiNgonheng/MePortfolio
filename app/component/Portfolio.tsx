@@ -155,7 +155,7 @@ const Portfolio = () => {
                     className="fixed top-0 left-0 right-0 h-1 bg-blue-600 z-50"
                     style={{ scaleX }}
                 />
-                <div className={`min-h-screen w-full transition-colors duration-300 ${
+                <div className={`min-h-screen w-full transition-colors duration-300 lg:px-1 ${
                     isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
                 }`}>
                     {/* Background Animation */}
@@ -165,8 +165,8 @@ const Portfolio = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-br from-blue-500 via-purple-500 to-gray-500 opacity-20' : 'bg-gradient-radial from-pink-100 via-white to-blue-100 opacity-40'}`} />
-                        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+                        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-br from-blue-500 via-purple-500 to-gray-500 opacity-20' : 'bg-gradient-radial from-pink-100 via-white to-blue-100 opacity-40 '}`} />
+                        <div className="absolute inset-0 bg-grid-pattern opacity-10 " />
                     </motion.div>
 
                     {/* Navigation */}
@@ -176,7 +176,7 @@ const Portfolio = () => {
                         animate={{ y: 0 }}
                         transition={{ type: 'spring', stiffness: 120, damping: 20 }}
                     >
-                        <div className="max-w-6xl mx-auto flex justify-between items-center">
+                        <div className="max-w-6xl mx-auto flex justify-between items-center lg:px-2">
                             <motion.h1
                                 className="text-3xl font-bold hover:scale-105 transition-transform font-serif"
                                 whileHover={{ scale: 1.05 }}
@@ -282,15 +282,15 @@ const Portfolio = () => {
                         animate="visible"
                         className="min-h-screen flex items-center pt-20 pb-20 relative overflow-hidden"
                     >
-                        <div className={`absolute inset-x-[300px] inset-y-0 ${isDark ? '' : 'bg-[radial-gradient(circle_at_center,theme(colors.purple.200),theme(colors.pink.200),theme(colors.blue.200))] opacity-50 blur-3xl'}`} />
-                        <div className="max-w-6xl mx-auto px-4 relative">
+                        <div className={`absolute inset-x-[300px] inset-y-0 ${isDark ? '' : 'bg-[radial-gradient(circle_at_center,theme(colors.red.600),theme(colors.white),theme(colors.white))] opacity-50 blur-3xl'}`} />
+                        <div className="max-w-6xl mx-auto px-4 relative mt-64 lg:px-0">
                             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                                 <motion.div
                                     className="md:w-1/2 text-center md:text-left"
                                     variants={boxVariants}
                                 >
-                                    <h2 className="text-4xl md:text-6xl font-bold mb-4">Tai Ngonheng</h2>
-                                    <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-400">Information Technology and Engineering</h3>
+                                    <h2 className="text-4xl md:text-7xl font-bold mb-4 ">Tai Ngonheng</h2>
+                                    <h3 className="text-xl md:text-2xl font-semibold mb-6 ">Information Technology and Engineering</h3>
                                     <p className="text-lg mb-8 opacity-80">
                                         Dynamic software engineer with deep expertise in Java, Python, JavaScript, PHP, and Dart.
                                         Highly proficient in Data structures and Algorithms, with a proven track record of solving complex challenges.
@@ -298,12 +298,14 @@ const Portfolio = () => {
                                     </p>
                                     <div className="flex justify-center md:justify-start gap-4">
                                         <motion.a
-                                            href="mailto:heng68807@gmail.com"
+                                            href="https://drive.google.com/file/d/1HfLvZzlC8tG-jDDPZyGGsUai0DW9xSFl/view?usp=sharing"
                                             className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all hover:scale-105"
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
+                                            target="_blank"
+
                                         >
-                                            Contact Me
+                                            Resume Here!
                                         </motion.a>
                                         <motion.a
                                             href="https://github.com/TaiNgonheng"
