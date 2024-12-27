@@ -1,10 +1,11 @@
 "use client"
 import React, { useState } from 'react';
-import { Moon, Sun, Github, Linkedin, Mail, Database, Cloud, Menu, X, Code, Award, Briefcase } from 'lucide-react';
+import { Moon, Sun, Github, Linkedin, Mail, Database, Globe, Cloud, Lock, Menu, X, Code, BookOpen, Award, Briefcase } from 'lucide-react';
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const Portfolio = () => {
-    const [isDark, setIsDark] = useState(true);
+    const [isDark, setIsDark] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const techStack = [
@@ -12,36 +13,36 @@ const Portfolio = () => {
             category: "Programming Languages",
             items: [
                 { name: "Java", icon: "☕", level: 95 },
-                { name: "Python", icon: "🐍", level: 78 },
-                { name: "JavaScript", icon: "💛", level: 80 },
-                { name: "PHP", icon: "🐘", level: 60 },
-                { name: "Dart", icon: "🎯", level: 60 }
+                { name: "Python", icon: "🐍", level: 90 },
+                { name: "JavaScript", icon: "💛", level: 90 },
+                { name: "PHP", icon: "🐘", level: 85 },
+                { name: "Dart", icon: "🎯", level: 80 }
             ]
         },
         {
             category: "Frameworks",
             items: [
                 { name: "Spring Boot", icon: "🍃", level: 95 },
-                { name: "Node.js", icon: "📦", level: 60 },
+                { name: "Node.js", icon: "📦", level: 90 },
                 { name: "Next.js", icon: "△", level: 85 },
-                { name: "React", icon: "⚛️", level: 70 },
-                { name: "Express.js", icon: "🚂", level: 60 }
+                { name: "React", icon: "⚛️", level: 90 },
+                { name: "Express.js", icon: "🚂", level: 85 }
             ]
         },
         {
             category: "Database",
             items: [
                 { name: "MySQL", icon: "🐬", level: 90 },
-                { name: "MongoDB", icon: "🍃", level: 65 },
-                { name: "PostgreSQL", icon: "🐘", level: 50 }
+                { name: "MongoDB", icon: "🍃", level: 85 },
+                { name: "PostgreSQL", icon: "🐘", level: 80 }
             ]
         },
         {
             category: "DevOps",
             items: [
                 { name: "Docker", icon: "🐳", level: 85 },
-                { name: "Kubernetes", icon: "☸️", level: 60 },
-                { name: "CI/CD", icon: "🔄", level: 75 }
+                { name: "Kubernetes", icon: "☸️", level: 80 },
+                { name: "CI/CD", icon: "🔄", level: 85 }
             ]
         }
     ];
@@ -156,7 +157,7 @@ const Portfolio = () => {
                     style={{ scaleX }}
                 />
                 <div className={`min-h-screen w-full transition-colors duration-300 ${
-                    isDark ? 'bg-gray-900 text-white' : 'bg-amber-200 text-gray-900'
+                    isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
                 }`}>
                     {/* Background Animation */}
                     <motion.div
@@ -165,13 +166,13 @@ const Portfolio = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-20' : 'bg-gradient-to-br from-amber-300 via-orange-300 to-yellow-300 opacity-30'}`} />
+                        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-br from-blue-500 via-purple-500 to-gray-500 opacity-20' : 'bg-gradient-radial from-pink-100 via-white to-blue-100 opacity-40'}`} />
                         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
                     </motion.div>
 
                     {/* Navigation */}
                     <motion.nav
-                        className={`fixed w-full p-6 ${isDark ? 'bg-gradient-to-b from-gray-900/80 to-transparent' : 'bg-gradient-to-b from-amber-200/80 to-transparent'} backdrop-blur-sm z-50`}
+                        className={`fixed w-full p-6 ${isDark ? 'bg-gradient-to-b from-gray-900/80 to-transparent' : 'bg-gradient-to-b from-white/80 to-transparent'} backdrop-blur-sm z-50`}
                         initial={{ y: -100 }}
                         animate={{ y: 0 }}
                         transition={{ type: 'spring', stiffness: 120, damping: 20 }}
@@ -189,7 +190,7 @@ const Portfolio = () => {
                                         href="https://github.com/TaiNgonheng"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-amber-300'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -199,7 +200,7 @@ const Portfolio = () => {
                                         href="https://linkedin.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-amber-300'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -207,7 +208,7 @@ const Portfolio = () => {
                                     </motion.a>
                                     <motion.a
                                         href="mailto:heng68807@gmail.com"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-amber-300'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -216,7 +217,7 @@ const Portfolio = () => {
                                 </div>
                                 <motion.button
                                     onClick={() => setIsDark(!isDark)}
-                                    className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-amber-300'} transition-colors`}
+                                    className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-colors`}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -224,7 +225,7 @@ const Portfolio = () => {
                                 </motion.button>
                                 <motion.button
                                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                    className={`sm:hidden p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-amber-300'} transition-colors`}
+                                    className={`sm:hidden p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-colors`}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -246,7 +247,7 @@ const Portfolio = () => {
                                         href="https://github.com/TaiNgonheng"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-amber-300'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -256,7 +257,7 @@ const Portfolio = () => {
                                         href="https://linkedin.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-amber-300'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -264,7 +265,7 @@ const Portfolio = () => {
                                     </motion.a>
                                     <motion.a
                                         href="mailto:heng68807@gmail.com"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-amber-300'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -280,15 +281,16 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className="min-h-screen flex items-center pt-20 pb-20"
+                        className="min-h-screen flex items-center pt-20 pb-20 relative overflow-hidden"
                     >
-                        <div className="max-w-6xl mx-auto px-4">
+                        <div className={`absolute inset-x-[300px] inset-y-0 ${isDark ? '' : 'bg-[radial-gradient(circle_at_center,theme(colors.purple.200),theme(colors.pink.200),theme(colors.blue.200))] opacity-50 blur-3xl'}`} />
+                        <div className="max-w-6xl mx-auto px-4 relative">
                             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                                 <motion.div
                                     className="md:w-1/2 text-center md:text-left"
                                     variants={boxVariants}
                                 >
-                                    <h1 className="text-7xl md:text-7xl font-bold mb-4">Tai Ngonheng</h1>
+                                    <h2 className="text-4xl md:text-6xl font-bold mb-4">Tai Ngonheng</h2>
                                     <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-400">Information Technology and Engineering</h3>
                                     <p className="text-lg mb-8 opacity-80">
                                         Dynamic software engineer with deep expertise in Java, Python, JavaScript, PHP, and Dart.
@@ -335,8 +337,9 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-20 ${isDark ? 'bg-gradient-to-r from-blue-900 to-purple-900' : 'bg-white'}`}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white relative overflow-hidden before:absolute before:inset-x-[100px] before:inset-y-0 before:bg-gray-100 before:blur-3xl before:-z-10'} rounded-[30px] shadow-lg`}
                     >
+                        <div className="absolute inset-y-0 left-[100px] right-[100px] bg-gray-100 blur-xl opacity-20 -z-10" />
                         <div className="max-w-6xl mx-auto px-4">
                             <h2 className={`text-3xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>Project Experience</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -345,15 +348,15 @@ const Portfolio = () => {
                                         key={index}
                                         variants={boxVariants}
                                         whileHover={{ scale: 1.05 }}
-                                        className={`${isDark ? 'bg-white/10' : 'bg-gray-100'} backdrop-blur-md p-6 rounded-xl shadow-lg`}
+                                        className={`${isDark ? 'bg-white/10' : 'bg-gray-100'} backdrop-blur-md p-6 rounded-[20px] shadow-lg`}
                                     >
                                         <h3 className={`text-xl font-bold mb-3 ${isDark ? 'text-blue-300' : 'text-blue-600'}`}>{project.title}</h3>
                                         <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} mb-4`}>{project.description}</p>
                                         <div className="flex flex-wrap gap-2">
                                             {project.tech.map((tech, techIndex) => (
                                                 <span key={techIndex} className={`px-2 py-1 ${isDark ? 'bg-blue-600/30 text-blue-200' : 'bg-blue-100 text-blue-800'} text-xs rounded-full`}>
-                                        {tech}
-                                    </span>
+                                                    {tech}
+                                                </span>
                                             ))}
                                         </div>
                                     </motion.div>
@@ -367,9 +370,10 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white'} rounded-[15px] shadow-lg`}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white relative overflow-hidden before:absolute before:inset-x-[100px] before:inset-y-0 before:bg-gray-100 before:blur-3xl before:-z-10'} rounded-[15px] shadow-lg`}
                         {...rotateAnimation}
                     >
+                        <div className="absolute inset-y-0 left-[100px] right-[100px] bg-gray-100 blur-xl opacity-20 -z-10" />
                         <div className="max-w-6xl mx-auto px-4">
                             <h2 className={`text-3xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>Certifications</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -393,47 +397,55 @@ const Portfolio = () => {
 
                     {/* Tech Stack Section */}
                     <motion.section
-                        id="expertise"
                         variants={sectionVariants}
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
-                        className={`py-20 ${isDark ? 'bg-gradient-to-r from-purple-900 to-blue-900' : 'bg-white'}`}
+                        animate="visible"
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white'} rounded-[30px] shadow-lg relative overflow-hidden`}
                     >
-                        <div className="max-w-6xl mx-auto px-4">
+                        <div className="absolute inset-0">
+
+                        </div>
+                        <div className="max-w-6xl mx-auto px-4 relative">
                             <h2 className={`text-3xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>Technical Expertise</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {techStack.map((category, index) => (
                                     <motion.div
                                         key={index}
                                         variants={boxVariants}
                                         className="mb-8"
                                     >
-                                        <h3 className={`text-2xl font-bold mb-4 ${isDark ? 'text-white' : 'text-blue-600'}`}>{category.category}</h3>
+                                        <h3 className={`text-xl font-bold mb-4 ${isDark ? 'text-blue-300' : 'text-blue-600'}`}>{category.category}</h3>
                                         <div className="space-y-4">
                                             {category.items.map((tech, techIndex) => (
                                                 <motion.div
                                                     key={techIndex}
                                                     whileHover={{ scale: 1.05 }}
-                                                    className={`${isDark ? 'bg-white/10' : 'bg-gray-100'} backdrop-blur-sm p-4 rounded-lg`}
+                                                    className={`${isDark ? 'bg-white/10' : 'bg-gray-100'} backdrop-blur-sm p-4 rounded-[20px]`}
                                                 >
                                                     <div className="flex items-center justify-between mb-2">
-                                                        <span className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-800'}`}>{tech.name}</span>
-                                                        <span className="text-2xl">{tech.icon}</span>
+                                                        <span className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-gray-800'}`}>{tech.name}</span>
+                                                        <span className="text-lg">{tech.icon}</span>
                                                     </div>
-                                                    <div className={`w-full ${isDark ? 'bg-gray-700' : 'bg-gray-300'} rounded-full h-2.5`}>
+                                                    <div className={`w-full ${isDark ? 'bg-gray-700' : 'bg-gray-300'} rounded-full h-2`}>
                                                         <motion.div
-                                                            className="bg-blue-600 h-2.5 rounded-full"
+                                                            className="bg-blue-600 h-2 rounded-full"
                                                             initial={{ width: 0 }}
                                                             animate={{ width: `${tech.level}%` }}
                                                             transition={{ duration: 1, delay: 0.5 }}
-                                                        ></motion.div>
+                                                        />
                                                     </div>
                                                 </motion.div>
                                             ))}
                                         </div>
                                     </motion.div>
                                 ))}
+                            </div>
+                            <div className="mt-12 text-center max-w-2xl mx-auto">
+                                <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                                    Leveraging cutting-edge technologies and frameworks to build robust, scalable solutions.
+                                    Continuous learning and adaptation to emerging tech trends ensure delivery of innovative solutions
+                                    that meet modern development standards.
+                                </p>
                             </div>
                         </div>
                     </motion.section>
@@ -443,17 +455,20 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white'} rounded-[15px] shadow-lg`}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white'} rounded-[30px] shadow-lg relative overflow-hidden`}
                         {...rotateAnimation}
                     >
+                        <div className="absolute inset-y-0 left-[100px] right-[100px] bg-gray-100 blur-xl opacity-20 -z-10" />
                         <div className="max-w-6xl mx-auto px-4">
                             <h2 className={`text-3xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>Additional Skills</h2>
-                            <div className="flex flex-col md:flex-row gap-8">
+                            <div className="flex flex-col md:flex-row gap-8 items-center">
                                 <div className="md:w-1/3">
-                                    <img
-                                        src="https://i.pinimg.com/originals/91/fc/40/91fc401ff8863e28cc5302208df2e29a.gif"
-                                        alt="Technology illustration"
-                                        className="w-full h-auto rounded-xl shadow-lg"
+                                    <motion.img
+                                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1cuI7RwUEcM1BMn32EYOlm8aj9SOOB.png"
+                                        alt="Programming concept illustration"
+                                        className="w-full h-auto rounded-xl mix-blend-multiply "
+                                        animate={{ rotate: 360 }}
+                                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                                     />
                                 </div>
                                 <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -485,69 +500,62 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gradient-to-r from-blue-900 to-purple-900' : 'bg-white'} rounded-[15px] shadow-lg mb-20`}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white'} rounded-[30px] shadow-lg relative overflow-hidden`}
                         {...rotateAnimation}
                     >
+                        <div className="absolute inset-y-0 left-[100px] right-[100px] bg-gray-100 blur-xl opacity-20 -z-10" />
                         <div className="max-w-6xl mx-auto px-4 text-center">
-                            <h2 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-800'}`}>Connect
-                                With Me</h2>
+                            <h2 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-800'}`}>Connect With Me</h2>
                             <p className={`text-lg max-w-2xl mx-auto mb-8 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                                I&apos;m always interested in hearing about new projects and opportunities.
-                                Let&apos;s collaborate and build something amazing together!
+                                I'm always interested in hearing about new projects and opportunities.
+                                Let's collaborate and build something amazing together!
                             </p>
                             <div className="flex justify-center gap-6">
                                 <motion.a
                                     href="https://github.com/TaiNgonheng"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-white/60 hover:bg-white/80'} transition-all hover:scale-110`}
-                                    whileHover={{scale: 1.1}}
-                                    whileTap={{scale: 0.95}}
+                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.95 }}
                                 >
-                                    <Github className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`}/>
+                                    <Github className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`} />
                                 </motion.a>
                                 <motion.a
                                     href="https://www.linkedin.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-white/60 hover:bg-white/80'} transition-all hover:scale-110`}
-                                    whileHover={{scale: 1.1}}
-                                    whileTap={{scale: 0.95}}
+                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.95 }}
                                 >
-                                    <Linkedin className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`}/>
+                                    <Linkedin className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`} />
                                 </motion.a>
                                 <motion.a
                                     href="mailto:heng68807@gmail.com"
-                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-white/60 hover:bg-white/80'} transition-all hover:scale-110`}
-                                    whileHover={{scale: 1.1}}
-                                    whileTap={{scale: 0.95}}
+                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.95 }}
                                 >
-                                    <Mail className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`}/>
+                                    <Mail className={`w-8 h-8 ${isDark ? 'text-white' : 'text-gray-800'}`} />
                                 </motion.a>
                             </div>
                             <motion.p
-                                className={`mt-12 text-xl font-semibold ${isDark ? 'text-yellow-500' : 'text-blue-600'}`}
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{delay: 0.5}}
+                                className={`mt-12 text-xl font-semibold ${isDark ? 'text-blue-400' : 'text-blue-600'}`}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.5 }}
                             >
-                                &quot;Software is a great combination between artistry and engineering.&quot; - Bill
-                                Gates
+                                "Software is a great combination between artistry and engineering." - Bill Gates
                             </motion.p>
-                            <div className="max-w-6xl mx-auto px-4 text-center">
-                                <motion.p
-                                    className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}
-                                    initial={{opacity: 0}}
-                                    animate={{opacity: 1}}
-                                    transition={{delay: 0.7}}
-                                >
-                                </motion.p>
-                            </div>
                         </div>
                     </motion.section>
 
-                    <footer className={`py-8 text-center ${isDark ? 'bg-gray-900' : 'bg-amber-200'}`}>
-                        © 2024 Tai Ngonheng. All rights reserved.
+                    {/* Footer */}
+                    <footer className={`py-8 text-center ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
+                        <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                            © 2023 Tai Ngonheng. All rights reserved.
+                        </p>
                     </footer>
                 </div>
             </motion.div>
