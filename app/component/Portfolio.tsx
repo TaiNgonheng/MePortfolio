@@ -156,7 +156,7 @@ const Portfolio = () => {
                     style={{ scaleX }}
                 />
                 <div className={`min-h-screen w-full transition-colors duration-300 lg:px-1 ${
-                    isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
+                    isDark ? 'bg-black text-white' : 'bg-white text-gray-900'
                 }`}>
                     {/* Background Animation */}
                     <motion.div
@@ -165,13 +165,12 @@ const Portfolio = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-br from-blue-500 via-purple-500 to-gray-500 opacity-20' : 'bg-gradient-radial from-pink-100 via-white to-blue-100 opacity-40 '}`} />
-                        <div className="absolute inset-0 bg-grid-pattern opacity-10 " />
+                        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 opacity-20' : 'bg-gradient-radial from-pink-100 via-white to-blue-100 opacity-40'}`} />
                     </motion.div>
 
                     {/* Navigation */}
                     <motion.nav
-                        className={`fixed w-full p-6 ${isDark ? 'bg-gradient-to-b from-gray-900/80 to-transparent' : 'bg-gradient-to-b from-white/80 to-transparent'} backdrop-blur-sm z-50`}
+                        className={`fixed w-full p-6 ${isDark ? 'bg-gradient-to-b from-black/80 to-transparent' : 'bg-gradient-to-b from-white/80 to-transparent'} backdrop-blur-sm z-50`}
                         initial={{ y: -100 }}
                         animate={{ y: 0 }}
                         transition={{ type: 'spring', stiffness: 120, damping: 20 }}
@@ -189,7 +188,7 @@ const Portfolio = () => {
                                         href="https://github.com/TaiNgonheng"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -199,7 +198,7 @@ const Portfolio = () => {
                                         href="https://linkedin.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -207,7 +206,7 @@ const Portfolio = () => {
                                     </motion.a>
                                     <motion.a
                                         href="mailto:heng68807@gmail.com"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -216,7 +215,7 @@ const Portfolio = () => {
                                 </div>
                                 <motion.button
                                     onClick={() => setIsDark(!isDark)}
-                                    className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-colors`}
+                                    className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-colors`}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -224,7 +223,7 @@ const Portfolio = () => {
                                 </motion.button>
                                 <motion.button
                                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                    className={`sm:hidden p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-colors`}
+                                    className={`sm:hidden p-2 rounded-full ${isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-colors`}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -246,7 +245,7 @@ const Portfolio = () => {
                                         href="https://github.com/TaiNgonheng"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -256,7 +255,7 @@ const Portfolio = () => {
                                         href="https://linkedin.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -264,7 +263,7 @@ const Portfolio = () => {
                                     </motion.a>
                                     <motion.a
                                         href="mailto:heng68807@gmail.com"
-                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
+                                        className={`p-2 rounded-full ${isDark ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-all hover:scale-110`}
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -280,9 +279,11 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
                         className="min-h-screen flex items-center pt-20 pb-20 relative overflow-hidden"
                     >
-                        <div className={`absolute inset-x-[300px] inset-y-0 ${isDark ? '' : 'bg-[radial-gradient(circle_at_center,theme(colors.red.600),theme(colors.white),theme(colors.white))] opacity-50 blur-3xl'}`} />
+                        <div className={`absolute inset-0 ${isDark ? '' : 'bg-[radial-gradient(circle_at_center,theme(colors.purple.600),theme(colors.purple.200),theme(colors.white))] opacity-50 blur-3xl'}`} />
                         <div className="max-w-6xl mx-auto px-4 relative mt-64 lg:px-0">
                             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                                 <motion.div
@@ -303,7 +304,6 @@ const Portfolio = () => {
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
                                             target="_blank"
-
                                         >
                                             Resume Here!
                                         </motion.a>
@@ -322,11 +322,14 @@ const Portfolio = () => {
                                 <motion.div
                                     className="md:w-1/2"
                                     variants={boxVariants}
+                                    initial={{ opacity: 0, x: 100 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8 }}
                                 >
                                     <img
-                                        src="https://cdn.dribbble.com/userupload/3898109/file/original-1e15ac48305378a87fc4997b2ad4c0ee.gif"
-                                        alt="Programmer animation"
-                                        className="w-full h-auto rounded-[15px] shadow-2xl"
+                                        src="https://topwebpro.co.uk/wp-content/uploads/2023/02/top-10.gif"
+                                        alt="3D monitor with user interface elements"
+                                        className="w-full max-h-full "
                                     />
                                 </motion.div>
                             </div>
@@ -338,9 +341,10 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white relative overflow-hidden before:absolute before:inset-x-[100px] before:inset-y-0 before:bg-gray-100 before:blur-3xl before:-z-10'} rounded-[30px] shadow-lg`}
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-900' : 'bg-purple-100'} rounded-[30px] shadow-lg`}
                     >
-                        <div className="absolute inset-y-0 left-[100px] right-[100px] bg-gray-100 blur-xl opacity-20 -z-10" />
                         <div className="max-w-6xl mx-auto px-4">
                             <h2 className={`text-3xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>Project Experience</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -349,7 +353,7 @@ const Portfolio = () => {
                                         key={index}
                                         variants={boxVariants}
                                         whileHover={{ scale: 1.05 }}
-                                        className={`${isDark ? 'bg-white/10' : 'bg-gray-100'} backdrop-blur-md p-6 rounded-[20px] shadow-lg`}
+                                        className={`${isDark ? 'bg-gray-800' : 'bg-purple-50'} p-6 rounded-[20px] shadow-lg`}
                                     >
                                         <h3 className={`text-xl font-bold mb-3 ${isDark ? 'text-blue-300' : 'text-blue-600'}`}>{project.title}</h3>
                                         <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} mb-4`}>{project.description}</p>
@@ -371,10 +375,11 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white relative overflow-hidden before:absolute before:inset-x-[100px] before:inset-y-0 before:bg-gray-100 before:blur-3xl before:-z-10'} rounded-[15px] shadow-lg`}
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-900' : 'bg-purple-200/50'} rounded-[15px] shadow-lg`}
                         {...rotateAnimation}
                     >
-                        <div className="absolute inset-y-0 left-[100px] right-[100px] bg-gray-100 blur-xl opacity-20 -z-10" />
                         <div className="max-w-6xl mx-auto px-4">
                             <h2 className={`text-3xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>Certifications</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -383,7 +388,7 @@ const Portfolio = () => {
                                         key={index}
                                         variants={boxVariants}
                                         whileHover={{ scale: 1.05 }}
-                                        className={`${isDark ? 'bg-gray-700' : 'bg-white'} p-6 rounded-xl shadow-lg flex items-center space-x-4`}
+                                        className={`${isDark ? 'bg-gray-800' : 'bg-white'} p-6 rounded-xl shadow-lg flex items-center space-x-4`}
                                     >
                                         <Award className={`w-12 h-12 ${isDark ? 'text-yellow-400' : 'text-yellow-500'}`} />
                                         <div>
@@ -401,11 +406,11 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white'} rounded-[30px] shadow-lg relative overflow-hidden`}
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-900/50' : 'bg-purple-200'} rounded-[30px] shadow-lg relative overflow-hidden`}
                     >
-                        <div className="absolute inset-0">
-
-                        </div>
+                        <div className={`absolute inset-0 ${isDark ? 'bg-purple-900' : 'bg-purple-100'} opacity-30 blur-3xl -z-10`} />
                         <div className="max-w-6xl mx-auto px-4 relative">
                             <h2 className={`text-3xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>Technical Expertise</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -421,7 +426,7 @@ const Portfolio = () => {
                                                 <motion.div
                                                     key={techIndex}
                                                     whileHover={{ scale: 1.05 }}
-                                                    className={`${isDark ? 'bg-white/10' : 'bg-gray-100'} backdrop-blur-sm p-4 rounded-[20px]`}
+                                                    className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} p-4 rounded-[20px]`}
                                                 >
                                                     <div className="flex items-center justify-between mb-2">
                                                         <span className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-gray-800'}`}>{tech.name}</span>
@@ -456,18 +461,19 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white'} rounded-[30px] shadow-lg relative overflow-hidden`}
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-200' : 'bg-purple-200'} rounded-[30px] shadow-lg relative overflow-hidden`}
                         {...rotateAnimation}
                     >
-                        <div className="absolute inset-y-0 left-[100px] right-[100px] bg-gray-100 blur-xl opacity-20 -z-10" />
                         <div className="max-w-6xl mx-auto px-4">
                             <h2 className={`text-3xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>Additional Skills</h2>
                             <div className="flex flex-col md:flex-row gap-8 items-center">
                                 <div className="md:w-1/3">
                                     <motion.img
-                                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1cuI7RwUEcM1BMn32EYOlm8aj9SOOB.png"
-                                        alt="Programming concept illustration"
-                                        className="w-full h-auto rounded-xl mix-blend-multiply "
+                                        src="https://png.pngtree.com/png-clipart/20240927/original/pngtree-4-3d-cartoon-number-with-a-transparent-background-png-image_16099289.png"
+                                        alt="3D number illustration"
+                                        className="w-full h-auto rounded-xl"
                                         animate={{ rotate: 360 }}
                                         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                                     />
@@ -478,7 +484,7 @@ const Portfolio = () => {
                                             key={index}
                                             variants={boxVariants}
                                             whileHover={{ scale: 1.05 }}
-                                            className={`${isDark ? 'bg-gray-700' : 'bg-white'} p-6 rounded-xl text-center shadow-lg transform transition-all duration-300 hover:rotate-3`}
+                                            className={`${isDark ? 'bg-gray-800' : 'bg-white'} p-6 rounded-xl text-center shadow-lg transform transition-all duration-300 hover:rotate-3`}
                                         >
                                             <motion.div
                                                 className={`inline-block p-4 rounded-full ${isDark ? 'bg-blue-600' : 'bg-blue-100'} mb-4`}
@@ -501,10 +507,12 @@ const Portfolio = () => {
                         variants={sectionVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-800' : 'bg-white'} rounded-[30px] shadow-lg relative overflow-hidden`}
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        className={`py-16 my-12 mx-12 ${isDark ? 'bg-gray-600' : 'bg-blue-200'} rounded-[30px] shadow-lg relative overflow-hidden`}
                         {...rotateAnimation}
                     >
-                        <div className="absolute inset-y-0 left-[100px] right-[100px] bg-gray-100 blur-xl opacity-20 -z-10" />
+                        <div className={`absolute inset-0 ${isDark ? 'bg-blue-900' : 'bg-blue-300'} opacity-30 blur-3xl -z-10`} />
                         <div className="max-w-6xl mx-auto px-4 text-center">
                             <h2 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-800'}`}>Connect With Me</h2>
                             <p className={`text-lg max-w-2xl mx-auto mb-8 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -516,7 +524,7 @@ const Portfolio = () => {
                                     href="https://github.com/TaiNgonheng"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
+                                    className={`p-4 rounded-full ${isDark ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -526,7 +534,7 @@ const Portfolio = () => {
                                     href="https://www.linkedin.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
+                                    className={`p-4 rounded-full ${isDark ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -534,7 +542,7 @@ const Portfolio = () => {
                                 </motion.a>
                                 <motion.a
                                     href="mailto:heng68807@gmail.com"
-                                    className={`p-4 rounded-full ${isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
+                                    className={`p-4 rounded-full ${isDark ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} transition-all hover:scale-110`}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -552,9 +560,8 @@ const Portfolio = () => {
                         </div>
                     </motion.section>
 
-
                     {/* Footer */}
-                    <footer className={`py-8 text-center ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
+                    <footer className={`py-8 text-center ${isDark ? 'bg-black' : 'bg-white'}`}>
                         <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                             © 2023 Tai Ngonheng. All rights reserved.
                         </p>
