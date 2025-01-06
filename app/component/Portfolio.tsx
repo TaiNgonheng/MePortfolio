@@ -299,13 +299,13 @@ const Portfolio = () => {
                                     </p>
                                     <div className="flex justify-center md:justify-start gap-4">
                                         <motion.a
-                                            href="https://drive.google.com/file/d/1HfLvZzlC8tG-jDDPZyGGsUai0DW9xSFl/view?usp=sharing"
+                                            href="mailto:heng68807@gmail.com"
                                             className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all hover:scale-105"
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
                                             target="_blank"
                                         >
-                                            Resume Here!
+                                            Hire !
                                         </motion.a>
                                         <motion.a
                                             href="https://github.com/TaiNgonheng"
